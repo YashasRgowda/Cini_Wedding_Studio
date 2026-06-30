@@ -15,7 +15,7 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="absolute left-0 top-16 hidden w-[19vw] max-w-[360px] md:top-20 md:block"
+        className="absolute left-0 top-16 hidden w-[19vw] max-w-[360px] lg:top-20 lg:block"
       >
         <div className="aspect-[4/5] w-full overflow-hidden">
           <img
@@ -47,12 +47,15 @@ export default function Experience() {
       </motion.div>
 
       {/* centered text — centered to the full viewport, like the reference */}
-      <div className="mx-auto max-w-2xl px-6 text-center md:py-10">
-        {/* image stacked on top for small screens */}
-        <div className="mx-auto mb-10 aspect-[4/5] w-full max-w-[280px] overflow-hidden md:hidden">
-          <img
-            src={images.experience}
-            alt="Bride being blessed by family during wedding rituals"
+      <div className="mx-auto max-w-2xl px-6 text-center lg:py-10">
+        {/* video stacked on top for small + tablet screens */}
+        <div className="mx-auto mb-10 aspect-[9/14] w-full max-w-[280px] overflow-hidden lg:hidden">
+          <video
+            src="/images/1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="h-full w-full object-cover"
           />
         </div>

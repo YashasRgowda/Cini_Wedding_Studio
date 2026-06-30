@@ -70,6 +70,8 @@ function SocialIcon({ label, href, path, fill }) {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const allLinks = [...leftLinks, ...rightLinks];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -142,15 +144,59 @@ export default function Navbar() {
         </a>
 
         <a href="#" aria-label="Home">
-          <Emblem className="h-12 w-auto" tone="wine" />
+          <Emblem className="h-11 w-auto" tone="wine" />
         </a>
 
-        <div className="flex items-center gap-4">
-          {socials.map((s) => (
-            <SocialIcon key={s.label} {...s} />
-          ))}
-        </div>
+        <button
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((o) => !o)}
+          className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] text-wine"
+        >
+          {menuOpen ? (
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+            >
+              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+            </svg>
+          ) : (
+            <>
+              <span className="block h-px w-6 bg-wine" />
+              <span className="block h-px w-6 bg-wine" />
+              <span className="block h-px w-6 bg-wine" />
+            </>
+          )}
+        </button>
       </nav>
+
+      {/* Mobile dropdown menu */}
+      {menuOpen && (
+        <div className="border-t border-wine/15 bg-blush px-6 py-8 lg:hidden">
+          <ul className="flex flex-col items-center gap-5 text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
+            {allLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="transition-colors hover:text-wine"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-7 flex items-center justify-center gap-6">
+            {socials.map((s) => (
+              <SocialIcon key={s.label} {...s} />
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

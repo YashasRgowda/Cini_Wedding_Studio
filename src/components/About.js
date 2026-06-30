@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen items-center overflow-hidden bg-blush py-20"
+      className="relative overflow-hidden bg-blush py-20 lg:flex lg:min-h-screen lg:items-center lg:py-0"
     >
       {/* left photo, flush to the edge, vertically centered */}
       <motion.div
@@ -35,7 +35,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="absolute right-0 top-1/2 z-0 hidden w-[42vw] max-w-[620px] -translate-y-1/2 md:block"
+        className="absolute right-0 top-1/2 z-0 hidden w-[42vw] max-w-[620px] -translate-y-1/2 lg:block"
       >
         <div className="aspect-[6/5] w-full overflow-hidden">
           <img
@@ -53,7 +53,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          className="px-6 md:pl-[27%] md:pr-12"
+          className="px-6 lg:pl-[27%] lg:pr-12"
         >
           <h2 className="max-w-[36rem] font-serif text-[2rem] leading-[1.12] text-wine md:text-[2.75rem]">
             We are dedicated to ensuring you re-live your special day for decades
@@ -76,12 +76,22 @@ export default function About() {
           </a>
         </motion.div>
 
-        {/* stacked image for small screens */}
-        <div className="relative mt-12 px-6 md:hidden">
-          <div className="aspect-[6/5] w-full overflow-hidden">
+        {/* stacked media for small + tablet screens */}
+        <div className="mt-12 grid gap-4 px-6 sm:grid-cols-2 lg:hidden">
+          <div className="aspect-[6/5] w-full overflow-hidden sm:aspect-[3/4]">
             <img
               src={images.about}
               alt="Couple sharing a quiet moment on their wedding day"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="aspect-[6/5] w-full overflow-hidden sm:aspect-[3/4]">
+            <video
+              src="/images/2.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="h-full w-full object-cover"
             />
           </div>

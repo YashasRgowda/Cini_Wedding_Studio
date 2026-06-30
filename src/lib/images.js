@@ -29,11 +29,11 @@ export const images = {
   // Testimonial framed portrait
   testimonialPhoto: u("photo-1606800052052-a08af7148866", 1200),
 
-  // Client / testimonial slider photos (one per client) — couple-focused
+  // Client / testimonial slider photos (one per client) — distinct couples
   testimonials: [
-    u("photo-1517456363055-5d162a453d6d", 1200),
-    u("photo-1505428215601-90f0007b9e83", 1200),
-    u("photo-1722952934661-dde241aeb591", 1200),
+    "https://images.pexels.com/photos/32149795/pexels-photo-32149795.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "https://images.pexels.com/photos/38147801/pexels-photo-38147801.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "https://images.pexels.com/photos/17657612/pexels-photo-17657612.jpeg?auto=compress&cs=tinysrgb&w=1200",
   ],
 
   // "Explore Videography" full-bleed cinematic background

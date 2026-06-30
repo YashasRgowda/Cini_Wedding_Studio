@@ -14,12 +14,12 @@ function Panel({ src, alt, label, href, align }) {
         alt={alt}
         className="h-full w-full object-cover"
       />
-      {/* light veil that fades in on hover */}
-      <div className="absolute inset-0 bg-blush/0 transition-colors duration-500 group-hover:bg-blush/65" />
+      {/* light veil — always on (touch), fades in on hover (desktop) */}
+      <div className="absolute inset-0 bg-blush/45 transition-colors duration-500 md:bg-blush/0 md:group-hover:bg-blush/65" />
 
-      {/* label — hidden until hover */}
+      {/* label — always visible on touch, hover-reveal on desktop */}
       <div
-        className={`absolute bottom-10 z-10 flex flex-col opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:bottom-16 ${
+        className={`absolute bottom-10 z-10 flex flex-col opacity-100 transition-opacity duration-500 md:bottom-16 md:opacity-0 md:group-hover:opacity-100 ${
           isRight
             ? "right-8 items-end text-right md:right-14"
             : "left-8 items-start text-left md:left-14"
@@ -39,7 +39,7 @@ function Panel({ src, alt, label, href, align }) {
 
 export default function FilmsCTA() {
   return (
-    <section id="films" className="grid w-full grid-cols-2">
+    <section id="films" className="grid w-full grid-cols-1 md:grid-cols-2">
       <Panel
         src={images.filmsLeft}
         alt="Couple sharing a quiet moment during their ceremony"

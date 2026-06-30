@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { images } from "@/lib/images";
 import Emblem from "@/components/Emblem";
@@ -32,6 +32,14 @@ export default function Testimonial() {
   const client = clients[index];
 
   const go = (dir) => setIndex((i) => (i + dir + total) % total);
+
+  // auto-advance the clients on an interval
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, 6000);
+    return () => clearInterval(id);
+  }, [total]);
 
   return (
     <section className="relative overflow-hidden bg-tan px-6 py-20 md:py-28">
@@ -68,7 +76,7 @@ export default function Testimonial() {
             exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.45 }}
           >
-            <h2 className="font-serif text-3xl uppercase leading-tight tracking-wide text-wine md:text-5xl">
+            <h2 className="font-serif text-2xl uppercase leading-tight tracking-wide text-wine sm:text-3xl md:text-5xl">
               {client.quote}
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-[15px] leading-relaxed text-ink/75">

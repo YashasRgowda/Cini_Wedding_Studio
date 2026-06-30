@@ -52,14 +52,14 @@ export default function Hero() {
           YS
         </span>
 
-        <div className="flex items-center gap-5 md:gap-10">
-          <span className="text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
+        <div className="flex items-center gap-3 sm:gap-5 md:gap-10">
+          <span className="text-[10px] font-medium uppercase tracking-widest-lg text-wine-soft sm:text-xs">
             Est.
           </span>
-          <h1 className="font-serif text-4xl tracking-wide text-wine md:text-6xl">
+          <h1 className="font-serif text-[2rem] tracking-wide text-wine sm:text-4xl md:text-6xl">
             Your Studio Name
           </h1>
-          <span className="text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
+          <span className="text-[10px] font-medium uppercase tracking-widest-lg text-wine-soft sm:text-xs">
             2014
           </span>
         </div>
