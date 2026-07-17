@@ -21,9 +21,9 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: "Your Studio Name | Destination Wedding Photographers & Filmmakers",
+  title: "Cini Wedding Studio | Bridal Makeup & Wedding Photography · Bangalore",
   description:
-    "Candid wedding photography and films that capture real emotions, intimate moments, and unforgettable love stories.",
+    "Cini Wedding Studio — bridal makeup, hair styling, wedding photography and cinematic video coverage in Bangalore. Capturing your special day with love and detail.",
 };
 
 export default function RootLayout({ children }) {

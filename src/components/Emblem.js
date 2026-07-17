@@ -2,7 +2,7 @@
 
 // Elegant oval monogram emblem, echoing the reference brand mark.
 // `tone` controls the stroke/text color so it works on light and dark grounds.
-export default function Emblem({ className = "", tone = "wine", initials = "YS" }) {
+export default function Emblem({ className = "", tone = "wine", initials = "CW" }) {
   const color = tone === "cream" ? "var(--cream)" : "var(--wine)";
 
   return (

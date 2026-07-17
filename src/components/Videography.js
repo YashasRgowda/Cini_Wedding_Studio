@@ -19,18 +19,24 @@ export default function Videography() {
       ref={ref}
       className="relative h-screen min-h-[560px] w-full overflow-hidden"
     >
-      {/* parallax background — taller than the window so it can drift */}
+      {/* parallax video background — taller than the window so it can drift */}
       <motion.div
         style={{ y }}
         className="absolute inset-x-0 top-[-15%] h-[130%] will-change-transform"
       >
-        <img
-          src={images.videographyBg}
-          alt="Cinematic moment from a wedding film"
+        <video
+          src="/videos/explore-videography/teaser.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={images.videographyBg}
           className="h-full w-full object-cover"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-ink/30" />
+      {/* Cinematic gradient overlay for legibility of overlaid text */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/25 to-ink/60" />
 
       {/* inline title, top-left */}
       <motion.div

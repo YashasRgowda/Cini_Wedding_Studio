@@ -10,21 +10,20 @@ export const images = {
 
   // Hero triptych (3 touching portrait images under the wordmark)
   triptych: [
-    u("photo-1735052712464-9d24b69be5f5", 900),
-    u("photo-1722952908667-f4883b8e6df6", 900),
-    u("photo-1727430256509-0f897d6f4765", 900),
+    "/images/hero/hero-1.jpg",
+    "/images/hero/hero-2.jpg",
+    "/images/hero/hero-3.jpg",
   ],
 
   // "The Experience" split section — full-height portrait
-  experience:
-    "https://images.pexels.com/photos/27825198/pexels-photo-27825198.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  experience: "/images/experience.jpg",
 
   // "The Experience" floating film-preview card thumbnail
   experienceFilm: u("photo-1583878545126-2f1ca0142714", 600),
 
   // "Films" two-image full-bleed CTA split
-  filmsLeft: u("photo-1517456363055-5d162a453d6d", 1600),
-  filmsRight: u("photo-1505428215601-90f0007b9e83", 1600),
+  filmsLeft: "/images/films-left.jpg",
+  filmsRight: "/images/films-right.jpg",
 
   // Testimonial framed portrait
   testimonialPhoto: u("photo-1606800052052-a08af7148866", 1200),

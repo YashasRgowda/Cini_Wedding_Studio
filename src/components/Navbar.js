@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import Emblem from "@/components/Emblem";
 
 const leftLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
 ];
 
 const rightLinks = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const socials = [
@@ -82,7 +82,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-y border-wine/15 bg-blush transition-shadow duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 w-full border-y border-wine/15 bg-blush transition-shadow duration-500 lg:sticky ${
         scrolled ? "shadow-[0_2px_10px_-4px_rgba(92,46,42,0.18)]" : ""
       }`}
     >
@@ -90,19 +90,22 @@ export default function Navbar() {
       <nav className="mx-auto hidden w-full max-w-[1600px] grid-cols-[13rem_1fr_auto_1fr_13rem] items-stretch lg:grid">
         <div className="flex items-center border-r border-wine/15 py-5 pl-8">
           <a
-            href="#"
+            href="/"
             className="font-serif text-[11px] leading-tight tracking-widest-lg uppercase text-wine"
           >
-            Your Studio
+            Cini Wedding
             <br />
-            Name
+            Studio
           </a>
         </div>
 
-        <ul className="flex items-center justify-end gap-10 pr-6 text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
+        <ul className="flex items-center justify-end gap-4 pr-8 text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
           {leftLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="transition-colors hover:text-wine">
+              <a
+                href={link.href}
+                className="block w-28 text-center transition-colors hover:text-wine"
+              >
                 {link.label}
               </a>
             </li>
@@ -110,15 +113,18 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center justify-center px-10">
-          <a href="#" aria-label="Home">
+          <a href="/" aria-label="Home">
             <Emblem className="h-14 w-auto" tone="wine" />
           </a>
         </div>
 
-        <ul className="flex items-center justify-start gap-10 pl-6 text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
+        <ul className="flex items-center justify-start gap-4 pl-8 text-xs font-medium uppercase tracking-widest-lg text-wine-soft">
           {rightLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="transition-colors hover:text-wine">
+              <a
+                href={link.href}
+                className="block w-28 text-center transition-colors hover:text-wine"
+              >
                 {link.label}
               </a>
             </li>
@@ -135,16 +141,12 @@ export default function Navbar() {
       {/* Mobile / tablet */}
       <nav className="flex items-center justify-between px-6 py-4 lg:hidden">
         <a
-          href="#"
+          href="/"
           className="font-serif text-sm leading-tight tracking-widest-lg uppercase text-wine"
         >
-          Your Studio
+          Cini Wedding
           <br />
-          Name
-        </a>
-
-        <a href="#" aria-label="Home">
-          <Emblem className="h-11 w-auto" tone="wine" />
+          Studio
         </a>
 
         <button

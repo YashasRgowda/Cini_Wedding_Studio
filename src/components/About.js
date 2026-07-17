@@ -18,12 +18,9 @@ export default function About() {
         className="absolute left-0 top-1/2 z-20 hidden w-[17vw] max-w-[260px] -translate-y-1/2 lg:block"
       >
         <div className="aspect-[3/4] w-full overflow-hidden">
-          <video
-            src="/images/2.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="/images/about-left.jpg"
+            alt="Couple celebrating on their wedding day"
             className="h-full w-full object-cover"
           />
         </div>
@@ -38,9 +35,14 @@ export default function About() {
         className="absolute right-0 top-1/2 z-0 hidden w-[42vw] max-w-[620px] -translate-y-1/2 lg:block"
       >
         <div className="aspect-[6/5] w-full overflow-hidden">
-          <img
-            src={images.about}
-            alt="Couple sharing a quiet moment on their wedding day"
+          <video
+            src="/videos/about/teaser.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster={images.about}
             className="h-full w-full object-cover"
           />
         </div>
@@ -79,19 +81,21 @@ export default function About() {
         {/* stacked media for small + tablet screens */}
         <div className="mt-12 grid gap-4 px-6 sm:grid-cols-2 lg:hidden">
           <div className="aspect-[6/5] w-full overflow-hidden sm:aspect-[3/4]">
-            <img
-              src={images.about}
-              alt="Couple sharing a quiet moment on their wedding day"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="aspect-[6/5] w-full overflow-hidden sm:aspect-[3/4]">
             <video
-              src="/images/2.mp4"
+              src="/videos/about/teaser.mp4"
               autoPlay
               loop
               muted
               playsInline
+              preload="metadata"
+              poster={images.about}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="aspect-[6/5] w-full overflow-hidden sm:aspect-[3/4]">
+            <img
+              src="/images/about-left.jpg"
+              alt="Couple celebrating on their wedding day"
               className="h-full w-full object-cover"
             />
           </div>

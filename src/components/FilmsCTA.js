@@ -44,14 +44,14 @@ export default function FilmsCTA() {
         src={images.filmsLeft}
         alt="Couple sharing a quiet moment during their ceremony"
         label="Images"
-        href="#portfolio"
+        href="/wedding-photography"
         align="left"
       />
       <Panel
         src={images.filmsRight}
         alt="Bride smiling in soft natural light"
         label="Films"
-        href="#films"
+        href="/wedding-films"
         align="right"
       />
     </section>

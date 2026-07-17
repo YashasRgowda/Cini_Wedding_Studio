@@ -12,7 +12,7 @@ import BackToTop from "@/components/BackToTop";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="pt-[70px] lg:pt-0">
         <Hero />
         <Navbar />
         <Experience />

@@ -7,22 +7,22 @@ import Emblem from "@/components/Emblem";
 
 const clients = [
   {
-    photo: images.testimonials[0],
+    photo: "/images/gallery/aishwarya-rohan/03.jpg",
     quote: "They were a dream team & surpassed all expectations",
     text: "They made us feel completely at ease across every event, and somehow made the whole day even more fun than we'd imagined. The photos and film are simply incredible — and the team's calm and flexibility through all the chaos meant the world to us.",
-    names: "Ananya & Rohan",
+    names: "Aishwarya & Rohan",
   },
   {
-    photo: images.testimonials[1],
+    photo: "/images/gallery/sneha-karthik/01.jpg",
     quote: "We had a great time; the team was incredible",
     text: "The turnaround was wonderfully quick and every frame was beautiful. They worked with us patiently over the following months to craft a film we were completely thrilled with. We could not recommend them more highly.",
-    names: "Nikita & Siddharth",
+    names: "Sneha & Karthik",
   },
   {
-    photo: images.testimonials[2],
+    photo: "/images/gallery/divya-arjun/03.jpg",
     quote: "We all got so emotional looking at the pictures",
     text: "They were absolutely brilliant with both the captures and the edit. The images reached us so quickly and held every memory so beautifully. Sweet, patient, and deeply skilled — exactly the people you want beside you on the day.",
-    names: "Priyanka & Suresh",
+    names: "Divya & Arjun",
   },
 ];
 

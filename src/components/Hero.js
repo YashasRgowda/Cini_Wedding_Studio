@@ -31,14 +31,14 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.05]"
       >
         <span className="font-script text-[14rem] text-wine md:text-[20rem]">
-          YS
+          CW
         </span>
       </div>
 
       {/* vertical sidebar label */}
       <div className="absolute left-3 top-1/2 z-10 hidden -translate-y-1/2 md:block lg:left-8">
         <span className="vertical-rl text-[11px] font-medium uppercase tracking-widest-xl text-wine-soft">
-          Destination Wedding Photographers &amp; Filmmakers
+          Bridal Makeup &amp; Wedding Photography · Bangalore
         </span>
       </div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
         className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-6 text-center"
       >
         <span className="mb-5 flex h-20 w-16 items-center justify-center rounded-[50%] border-2 border-wine/60 font-script text-3xl text-wine">
-          YS
+          CW
         </span>
 
         <div className="flex items-center gap-3 sm:gap-5 md:gap-10">
@@ -57,7 +57,7 @@ export default function Hero() {
             Est.
           </span>
           <h1 className="font-serif text-[2rem] tracking-wide text-wine sm:text-4xl md:text-6xl">
-            Your Studio Name
+            Cini Wedding Studio
           </h1>
           <span className="text-[10px] font-medium uppercase tracking-widest-lg text-wine-soft sm:text-xs">
             2014
@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         <p className="mt-2 font-script text-3xl text-wine-soft md:text-4xl">
-          Photography
+          Bridal Makeup &amp; Photography
         </p>
       </motion.div>
 

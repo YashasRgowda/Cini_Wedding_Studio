@@ -31,8 +31,8 @@ export default function ClosingCTA() {
           Reach Out To Us Now And Let&apos;s Start Planning Together!
         </p>
         <a
-          href="mailto:hello@yourstudioname.com"
-          aria-label="Email Your Studio Name"
+          href="mailto:ciniweddingstudio@gmail.com"
+          aria-label="Email Cini Wedding Studio"
           className="mt-8 flex h-10 w-10 items-center justify-center rounded-full border border-cream/70 transition-colors hover:bg-cream hover:text-wine"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
