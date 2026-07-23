@@ -10,7 +10,7 @@ export const metadata = {
 
 const base = "/images/gallery/sneha-karthik";
 const photos = Array.from(
-  { length: 15 },
+  { length: 28 },
   (_, i) => `${base}/${String(i + 1).padStart(2, "0")}.jpg`
 );
 
